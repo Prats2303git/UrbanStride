@@ -1,0 +1,114 @@
+@font-face {
+    font-family: Spartan;
+    src: url(/assets/Spartan-Regular.ttf);
+}
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Spartan ,sans-serif;
+    box-sizing: border-box;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 70px;
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.navbar li{
+    list-style: none;
+    padding: 0 20px;
+    text-decoration: none;
+    font-size: 17.5px;
+    font-weight: 600;
+    color: #666666;
+    transition: 0.3s ease;
+    position: relative;
+}
+.navbar li i:nth-child(1){
+    font-size: 19.5px;
+}
+.navbar li button i:hover{
+    background: none;
+    border: none;
+    color: #088178;
+}
+.navbar button{
+    background: transparent;
+    border: none;
+    color: #666666;
+    cursor: pointer;
+    font-size: 17.5px;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+.navbar li:hover{
+    color: #088178;
+    cursor: pointer;
+}
+.navbar li:hover,
+.navbar li.active {
+    color: #088178;   
+}
+.navbar li.active::after,
+.navbar li:hover::after {
+    content: "";
+    width: 35%;
+    height: 3px;
+    background: #088178;
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
+}
+.page1, .page2, .page3{
+    max-height: 100vh;
+    width: 100%;
+    padding: 30px 70px;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+h1{
+    font-size: 30px;
+    font-weight: 650;
+    color: rgb(0, 183, 0);
+}
+.content{
+    width: 75%;
+    padding: 25px 0;
+}
+.content p{
+    margin: 20px 0;
+    font-size: 20px;
+}
+.content p span, .content li span{
+    font-weight: 600;
+    color: black;
+}
+.content ul li{
+    margin-top: 10px;
+    font-size: 17px;
+}
+footer
+{
+    height: 20vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+footer h3{
+    font-size: 13px;
+}
+

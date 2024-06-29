@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UrbanStride-home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/stylesheets/userHome.css">
+</head>
+
+<body>
+    <section class="header">
+        <h2>UrbanStride.</h2>
+        <div>
+            <ul class="navbar">
+                <form method="get" action="/home">
+                    <li><button>Home</button></li>
+                </form>
+                <form method="post" action="/aboutus">
+                    <li><button>About Us</button></li>
+                </form>
+                <form method="post" action="/contact">
+                    <li><button>Contact</button></li>
+                </form>
+                <li class="btn"><i class="fa-solid fa-cart-shopping"></i></li>
+                <form method="post" action="/logout">
+                    <li><button><i class="fa-solid fa-right-from-bracket"></i></button></li>
+                </form>
+            </ul>
+        </div>
+    </section>
+    <section class="intro">
+        <img src="/assets/pexels-pluyar-786003.jpg">
+        <div class="popup-cart">Do you want to checkout for the items saved in cart ?
+            <div class="confirm">
+                <button class="yes">Yes</button>
+                <button class="no">No</button>
+            </div>
+        </div>
+        <h1>Get in and Go.</h1>
+        <p>Explore our latest launches </p>
+    </section>
+    <div class="sec-products">
+        <h2>Footwear in Focus</h2><br>
+        <p>Discover the art of walking in style today</p>
+        <div class="container">
+            <div class="popup">Added to Cart</div>
+            <% products.forEach(function(product){ %>
+            <div class="product" style="background: #f6f6f6">
+                <div class="title">
+                    <div class="brand"><img src="/assets//pngwing-nike.com.png"></div>
+                    <h2 style="color: black;"><%= product.prodname %></h2>
+                </div>
+                <div class="image">
+                    <img src="data:image/png;base64,<%= product.image.toString('base64') %>">
+                </div>
+                <div class="content">
+                    <div class="price">Price : Rs <%= product.price %></div>
+                    <button style="color: #1A5983;"><i class="fa-solid fa-cart-shopping"></i></button>
+                </div>
+            </div>
+            <% }) %>
+        </div>
+    </div>
+    <div class="services">
+        <div class="container">
+            <ul class="service-list">        
+                <li class="service-item">
+                    <div class="service-card">        
+                        <div class="card-icon">
+                            <img src="/assets/service-1.png" width="53" height="28" alt="Service icon">
+                        </div>        
+                        <div>
+                            <h3 class="h4 card-title">Free Shipping</h3>        
+                            <p class="card-text">All orders over <span>Rs4000</span></p>
+                        </div>        
+                    </div>
+                </li>
+                <li class="service-item">
+                    <div class="service-card">
+                        <div class="card-icon">
+                            <img src="/assets/service-2.png" width="43" height="35" alt="Service icon">
+                        </div>        
+                        <div>
+                            <h3 class="h4 card-title">Quick Payment</h3>
+                            <p class="card-text">100% secure payment</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="service-item">
+                    <div class="service-card">       
+                        <div class="card-icon">
+                            <img src="/assets/service-3.png" width="40" height="40" alt="Service icon">
+                        </div>
+                        <div>
+                            <h3 class="h4 card-title">Free Returns</h3>
+                            <p class="card-text">Money back in 30 days</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="service-item">
+                    <div class="service-card">
+                        <div class="card-icon">
+                            <img src="/assets/service-4.png" width="40" height="40" alt="Service icon">
+                        </div>
+                        <div>
+                            <h3 class="h4 card-title">24/7 Support</h3>
+                            <p class="card-text">Get Quick Support</p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <footer>
+        <h3>@Copyright2024 | UrbanStride</h3>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+        integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="/javascripts/userHome.js"></script>
+</body>
+
+</html>
