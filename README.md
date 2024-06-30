@@ -5,13 +5,14 @@ experience.
 Find the deployment at : https://urban-stride-e-comm-git-main-prats2303gits-projects.vercel.app/
 
 
-**The lander** : 
+**The lander** : <br>
 Tech Stack : CSS, GSAP, JavaScript 
 ------------------------------------------------
 ![Screenshot 2024-06-30 095145](https://github.com/Prats2303git/UrbanStride-E-comm/assets/124715995/3ec45913-b9a5-464e-9a5b-f45829d284e2)
 
 
-**User Authentication and Authorization** : Every new user must register and then login with their valid credentials. Flash messages are shown if the credentials are wrong
+**User Authentication and Authorization** : 
+Every new user must register and then login with their valid credentials. Flash messages are shown if the credentials are wrong
 Tech Stack : Bcrypt, JWT, and Express-Session
 -----------------------------------------------
 
